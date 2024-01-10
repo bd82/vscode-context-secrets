@@ -1,0 +1,39 @@
+{
+  "name": "test-vscode-secrets",
+  "private": true,
+  "displayName": "test-vscode-secrets",
+  "description": "test-vscode-secrets",
+  "repository": "github.com/bd82/test-vscode-secrets",
+  "version": "2.0.0",
+  "publisher": "bd82",
+  "engines": {
+    "vscode": "^1.32.0"
+  },
+  "activationEvents": [
+    "onCommand:extension.showSecret",
+    "onCommand:extension.saveSecret"
+  ],
+  "main": "./lib/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.showSecret",
+        "title": "Show Secret"
+      },
+      {
+        "command": "extension.saveSecret",
+        "title": "Save Secret"
+      }
+    ],
+    "configuration": {
+
+    }
+  },
+  "scripts": {
+    "vscode:package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.32.0",
+    "vsce" : "2.15.0"
+  }
+}
